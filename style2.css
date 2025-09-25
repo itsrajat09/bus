@@ -1,85 +1,126 @@
-body{
-   margin:0px;
-   padding:0px;
-  
-
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.body_container{
-    background-color: black;
-     height:100vh;
-     width:100vw;
 
-}  
-a{
-    text-decoration: none;
-    color:#26C6DA;
+/* Container */
+.body_container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
 }
+
+/* Camera video */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes video fill screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Links and icons */
+a {
+  text-decoration: none;
+  color: #26c6da;
+}
+
 i {
-    font-size: xx-large;
-    color:#ffffff;
-}
-#scan_qr{
-    color:#ffffff;
-    font-size: larger;
-}
-.camara_container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:center;
-}
-.scanner{
-    margin-left:50px;
-    margin-top:100px;
-
+  font-size: xx-large;
+  color: #ffffff;
 }
 
-@keyframes blinking{
-    0%{opacity: 1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
-}
-.red_blink{
-    height:2px;
-    width:230px;
-    background-color:red;
-    position:relative;
-    bottom:160px;
-    left:25px;
-    animation:blinking 1s infinite;
-
-}
-.enter_container{
-    height:280px;
-    background-color:white;
-    border-top-left-radius:20px;
-      border-top-right-radius:20px;
-}
-#bus_number{
-  text-align:center;
-  position:relative;
-  top:30px;
-  font-weight:900;
-
-}
-#example{
-    text-align:center;
-    position:relative;
-    top:30px;
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.box{
-    height:60px;
-    width:50px;
-    background-color:rgb(193, 187, 187);
-    margin-right:15px;
-    position:relative;
-    top:40px;
-    border-radius:10px;
-}
-.box_container{
-    display:flex;
-    justify-content: center;
+/* Header / top bar */
+.camara_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
 
+#scan_qr {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Scanner effect */
+.scanner {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  z-index: 2;
+  position: relative;
+}
+
+.red_blink {
+  height: 2px;
+  width: 240px;
+  background-color: red;
+  animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Bottom input section */
+.enter_container {
+  height: 280px;
+  background-color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  z-index: 3;
+}
+
+#bus_number {
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+#example {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Input boxes */
+.box_container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.box {
+  height: 60px;
+  width: 50px;
+  background-color: #c1bbbb;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}

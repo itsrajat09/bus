@@ -29,8 +29,25 @@ i{
 
 }
 #bus_image{
-  position:relative;
-  left:75px;
+
+  position:static;
+  margin-left:30px;
+  height:300px;
+}
+#bus_number{
+font-weight:900;
+    font-size:21px;
+    position:absolute;
+    bottom:82px;
+    left:173px;
+
+}
+#common{
+    font-weight:900;
+    font-size:19px;
+    position:absolute;
+    bottom:105px;
+    left:167px;
 }
 #bus_route{
     font-size:20px;
