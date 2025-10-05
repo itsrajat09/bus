@@ -203,35 +203,29 @@ i {
   position: relative;
   bottom: 390px;
 }
-#number {
-  font-weight: 900;
-  background-color: #ffffff;
-  height: 30px;
-  width: 25px;
-  line-height:30px;
-  text-align:center;
-  border-radius: 4px;
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   position:relative;
-  bottom:55px;
+  bottom:30px;
 }
-#increase {
-  background-color: #ffffff;
-  height: 20px;
-  width: 15px;
+
+.counter button {
+  background-color: #2d5bd0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+
+}
+.counter span {
+  font-size: 16px;
+  font-weight: 600;
+  width: 20px;
   text-align: center;
-  border-radius: 4px;
-  position:relative;
-  bottom:50px;
 }
-#decrease {
-  background-color: #ffffff;
-  height: 20px;
-  width: 15px;
-  text-align: center;
-  border-radius: 4px;
-   position:relative;
-  bottom:50px;
-}
+
 .fare{
     display:flex;
     align-items:center;
@@ -271,7 +265,7 @@ i {
 .amount{
     position:relative;
     bottom:40px;
-    font-size:28px;
+    font-size:21px;
     left:250px;
     font-weight:900;
     width:100px;

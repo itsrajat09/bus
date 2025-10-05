@@ -1,12 +1,11 @@
 body {
-  margin-top: 20;
+  margin: 0;
   background: #fff;
   font-family: "Roboto", Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 
 .upi-screen {
@@ -16,7 +15,7 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-bottom:180px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -37,115 +36,129 @@ body {
 }
 
 .bank-number {
-  font-size: 20px;
+  font-size: 18px;
   color: black;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .upi-logo {
- height:80px;
- width:95px;
+  height: 60px;
+  width: 95px;
 }
 
 .receiver-section {
   margin-top: 10px;
-  font-size: 20px;
-  background-color:rgb(233, 233, 233);
-
+  font-size: 18px;
+  background-color: rgb(233, 233, 233);
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .receiver-section .row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .pin-label {
   text-align: center;
   font-size: 13px;
   color: #333;
-
-  margin-bottom: 58px;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pin-boxes {
   display: flex;
   justify-content: center;
   gap: 18px;
-  margin-bottom: 16px;
-  margin-top:30px;
- 
+  margin-bottom: 30px;
 }
 
 .pin-boxes .box {
   width: 45px;
-  height: 2px;
-  background: #000;
-  
+  height: 50px;
+ 
+  font-size: 33px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
 }
 
+.pin-boxes .box::before {
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 33px;
+}
 
 .warning {
   background: #fff4cc;
   border-radius: 8px;
   display: flex;
   align-items: flex-start;
-  padding: 8px 10px;
+  padding: 10px;
   font-size: 12px;
   line-height: 1.3;
+  
   margin-bottom: 20px;
-  position:relative;
-  top:60px;
+  position: relative;
+  top:40px
 }
-.pin-label{
-  position:relative;
-  top:10px;
-}
+
 .warn-icon {
   color: #ff9800;
   font-weight: bold;
   margin-right: 6px;
-
+  
 }
-.keypad_container{
-position:relative;
-top:102px;
-right:20px;
 
-
-height:310px;
-padding:0px;
-margin:0px;
-width:390px;
-background-color: rgb(225, 222, 222);
+.keypad_container {
+  position: relative;
+  top:65px;
+  height: 370px;;
+  padding: 0px;
+  right:20px;
+  width: 110%;
+  background-color: rgb(225, 222, 222);
+  border-radius: 10px;
 }
+
 .keypad {
   
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-top: auto;
-  margin-top:50px
+  padding: 20px;
 }
 
 .keypad .key {
-  
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  padding: 12px 0;
-  outline:none;
-  border:none;
+  padding: 15px 0;
+  outline: none;
+  border: none;
   background-color: rgb(225, 222, 222);
   color: #1956b2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.keypad .delete {
+.keypad .key:hover {
+  background-color: #d0d0d0;
+}
+
+.keypad .key_delete {
   font-size: 18px;
+  background-color: #ffcdd2;
 }
 
-.keypad .ok {
+.keypad .key_ok {
   background: #0d47a1;
   color: white;
 }

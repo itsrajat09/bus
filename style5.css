@@ -33,6 +33,9 @@ i{
   font-weight: 900;
    
 }
+#phn_pay{
+color:black;
+}
 #right_arrow{
   font-size:20px;
   margin-right:20px
@@ -144,13 +147,14 @@ bottom:25px;
 .wallet_con{
   margin-left:-135px;
   margin-bottom:110px;
-   position:relative;
-  left:5px;
+   position:absolute;
+  left:230px;
+  
 }
 
 .wallet-title {
    margin:0px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 900;
 
 }

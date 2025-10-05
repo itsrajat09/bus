@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metro Ticket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+  <div class="app">
+    <div class="topbar">
+        <img src="dmrc.svg">
+    </div>
+
+    <div class="card">
+      <div class="station start" id="startRow">
+        <div class="dot"></div>
+        <div class="station-info">
+          <p id="startStation" class="station-name">Brigadier Hoshiyar Singh</p>
+          <p class="sub-text">Nearest Metro Station</p>
+        </div>
+      </div>
+
+  
+      <div class="station end" id="endRow">
+       <div class="location_icon"> <i class="fa-solid fa-location-dot"></i> </div>
+        <p id="endStation" class="station-placeholder">Ending stop</p>
+      </div>
+      
+
+      <p class="section-label">Frequently Visited</p>
+
+      <div class="ticket-section">
+        <p class="ticket-label">Number of tickets</p>
+        <div class="counter">
+          <button id="decBtn">−</button>
+          <span id="ticketCount">1</span>
+          <button id="incBtn">+</button>
+        </div>
+      </div>
+    </div>
+      <div class="fare-section">
+        <p class="fare-label">Final Fare</p>
+        <p id="fare" class="fare-value">₹ 10</p>
+      </div>
+    
+
+    <button id="payBtn" class="pay-btn">Pay</button>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

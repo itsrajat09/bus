@@ -93,7 +93,7 @@ i {
 }
 
 .amount {
-  font-size: 28px;
+  font-size: 21px;
   font-weight: bold;
   margin-bottom: 20px;
   background-color: rgb(70, 69, 69);
@@ -123,13 +123,13 @@ i {
 }
 
 .message-box .value {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0;
 }
 
 .note {
-  font-size: 19px;
+  font-size: 15px;
   color: #fff;
   margin-bottom: 20px;
   text-align: center;

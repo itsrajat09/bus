@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment Screen</title>
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
       integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -12,52 +12,62 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="style6.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style6.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="opening_phonepay">
-           <img src="phonepay_logo.png">
-           <div class="dot">
-           <p id="dot1" >.</p>
-           <p id="dot2" >.</p>
-           <p id="dot3" >.</p>
-           </div>
+      <div class="opening_phonepay">
+        <img src="phonepay_logo.png" />
+        <div class="dot">
+          <p id="dot1">.</p>
+          <p id="dot2">.</p>
+          <p id="dot3">.</p>
         </div>
-        <!-- Header -->
-       
-        <div class="header">
-           <a href="index5.html"><i id="back_button"class="fa-solid fa-arrow-left"></i></a>
-            <h2 class="title">Pay</h2>
-            <span class="info-icon">?</span>
-        </div>
+      </div>
+      <!-- Header -->
+
+      <div class="header">
+        <a href="index5.html"
+          ><i id="back_button" class="fa-solid fa-arrow-left"></i
+        ></a>
+        <h2 class="title">Pay</h2>
+        <span class="info-icon">?</span>
+      </div>
+      <div class="sub_container">
         <div class="sub_container">
-          <div class="sub_container">
-        <!-- Profile Section -->
-        <div class="profile">
+          <!-- Profile Section -->
+          <div class="profile">
             <div class="profile-pic">AL</div>
             <div class="profile-name">ANAMAR TECHNOLOGIES PRI...</div>
-        </div>
+          </div>
 
-        <!-- Amount Section -->
-        <div class="amount">₹ 22.79</div>
+          <!-- Amount Section -->
+          <div class="amount" id="paymentAmount">₹ 0.00</div>
 
-        <!-- Message Section -->
-        <div class="message-box">
+          <!-- Message Section -->
+          <div class="message-box">
             <p class="label">Message</p>
             <p class="value">UPIIntent</p>
-        </div>
+          </div>
 
-        <!-- Note -->
-        <p class="note">
-    On tapping Pay, money will be deducted from the selected payment mode.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </p>
-
-       
+          <!-- Note -->
+          <p class="note">
+            On tapping Pay, money will be deducted from the selected payment
+            mode.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
         </div>
-        </div>
-        <a href="index7.html"><button class="pay-btn">Proceed To Pay</button></a>
+      </div>
+      <a href="index7.html"><button class="pay-btn">Proceed To Pay</button></a>
     </div>
-        <script src="script.js"></script>
-</body>
+<script src="script.js"></script>
+    <script>
+      const paymentAmount = document.getElementById("paymentAmount");
+const storedFare = localStorage.getItem("finalFare");
+
+if (storedFare) {
+  paymentAmount.textContent = storedFare; // display fare
+  // Do NOT remove here, needed in index7
+}
+    </script>
+  </body>
 </html>

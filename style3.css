@@ -38,16 +38,19 @@ i{
 font-weight:900;
     font-size:21px;
     position:absolute;
-    bottom:82px;
+    bottom:392px;
     left:173px;
-
+   
+  
+    
 }
 #common{
     font-weight:900;
     font-size:19px;
     position:absolute;
-    bottom:105px;
-    left:167px;
+    bottom:415px;
+    left:165px;
+   
 }
 #bus_route{
     font-size:20px;
@@ -63,7 +66,7 @@ font-weight:900;
     color:#2bb7ca;
     font-weight:900px;
 }
-#enter_route{
+#stop_input{
     position:relative;
    width:340px;
     bottom:50px;
@@ -72,7 +75,7 @@ font-weight:900;
     font-size:23px;
     font-weight:600;
     border-radius:10px;
-    opacity: 60%;
+    
     
 }
 .input_container_stop{
@@ -93,7 +96,7 @@ font-weight:900;
     color:#2bb7ca;
     font-weight:900px;
 }
-#enter_route{
+#route_input{
     position:relative;
    width:340px;
     bottom:50px;
@@ -112,7 +115,16 @@ font-weight:900;
     text-align: center;
     line-height: 45px;
     color:#ffffff;
-    position:relative;
-    top:90px;
+    
     border-radius: 10px;
+}
+
+.change-btn {
+  position: relative;
+  left: 287px;
+  width: 50px;
+  bottom: 40px;
+  color: #2bb7ca;
+  font-weight: bold;
+  cursor: pointer;
 }

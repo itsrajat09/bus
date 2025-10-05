@@ -21,17 +21,18 @@
     <!-- Receiver & Amount -->
     <div class="receiver-section">
       <div class="row"><span>To:</span><span class="right">ANAMAR TECH...</span></div>
-      <div class="row"><span>Sending:</span><span class="right">₹ 22.79</span></div>
+      <div class="row"><span>Sending:</span> <div class="amount" id="paymentAmount">₹ 0.00</div></div>
     </div>
 
     <!-- PIN Input -->
     <div class="pin-label">ENTER 4-DIGIT UPI PIN</div>
     <div class="pin-boxes">
-      <div class=" box box1"></div>
-      <div class=" box box2"></div>
-      <div class=" box box3"></div>
-      <div class=" box box4"></div>
-    </div>
+  <div class="box box1">_</div>
+  <div class="box box2">_</div>
+  <div class="box box3">_</div>
+  <div class="box box4">_</div>
+</div>
+
    
 
     <!-- Warning Message -->
@@ -61,5 +62,14 @@
     </div>
   </div>
   <script src="script.js"></script>
+  <script>
+     const paymentAmount = document.getElementById("paymentAmount");
+const storedFare = localStorage.getItem("finalFare");
+
+if (storedFare) {
+  paymentAmount.textContent = storedFare;
+  localStorage.removeItem("finalFare"); // remove only after final use
+}
+    </script>
 </body>
 </html>

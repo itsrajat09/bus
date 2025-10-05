@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Route Detail</title>
     <link
       rel="stylesheet"
@@ -12,36 +12,41 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style3.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div class="body_container">
-        <div class="nav_container_of_route_detail">
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="nav_container_of_route_detail">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
         <h2 id="route_details">Route Details</h2>
         <div class="timer">0</div>
-        </div>
-        <div class="bus_png">
-            <img id="bus_image" src="bus.png">
-            <p id="common">DL1PD</p>
-            <p id="bus_number">2212</p>
-        </div>
-    
+      </div>
 
-        <div class="input_container_start">
-            <p id="bus_route">Bus Route</p>
-            <a href="index3.html"><p id="change">Change</p></a>
-            <input id="enter_route" type="text" placeholder="Click here to enter route">
-        </div>
+      <div class="bus_png">
+        <img id="bus_image" src="bus.png" />
+      </div>
 
-        <div class="input_container_stop">
-            <p id="bus_route">Starting Stop</p>
-            <a href="index3.html"><p id="change">Change</p></a>
-            <input id="enter_route" type="text" placeholder="Starting Stop">
-        </div>
-        <div class="continue_container">
-           <a href="index4.html"> <p id="continue" >Continue</p></a>
-        </div>
+      <!-- Bus route input -->
+      <div class="input_container_start">
+        <p id="bus_route">Bus Route</p>
+        <p id="changeRoute" class="change-btn">Change</p>
+        <input id="route_input" type="text" placeholder="Click here to enter route" />
+      </div>
+
+      <!-- Starting stop input -->
+      <div class="input_container_stop">
+        <p id="bus_route">Starting Stop</p>
+        <p id="changeStop" class="change-btn">Change</p>
+        <input id="stop_input" type="text" placeholder="Starting Stop" />
+      </div>
+
+      <div class="continue_container">
+        <a href="index4.html"><p id="continue">Continue</p></a>
+      </div>
     </div>
+
+    <p id="common">DL1PD</p>
+    <p id="bus_number">2212</p>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -11,13 +11,6 @@ body {
   height: 80px;
   width:  390px;
   border-radius:20px;
-
-}
-.profile_container{
-  background-color:red;
-  margin-left:500px;
-  width:100px;
-
 }
 .hide {
   background-color: #ffffff;

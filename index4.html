@@ -57,11 +57,11 @@
     <!---dkmejkferthi4vn5kntn4ul-->
     <div class="number_of_ticket">
       <p id="tickets">Number Of Tickets</p>
-    <div class="counting">
-      <p id="decrease">-</p>
-      <p id="number">1</p>
-      <p id="increase">+</p>
-    </div>
+     <div class="counter">
+          <button id="decBtn">−</button>
+          <span id="ticketCount">1</span>
+          <button id="incBtn">+</button>
+        </div>
     </div>
     <div class="dotted_line"></div>
     <div class="dotted_container">
@@ -78,11 +78,63 @@
      <div class="coupon">
       <p id="coupon_applied">Coupon Applied</p>
      </div>
-     <div class="amount">&#8377; 22.79</div>
+     <div class="amount">
+        <p id="fare" class="fare-value">₹22.79</p></div>
       <div class="pay_container">
-           <a href="index5.html"> <p id="pay" >Pay</p></a>
+           <a href="index5.html" id="payLink"><p id="pay">Pay</p></a>
+
         </div>
      </div>
   </body>
-  <script src="script.js"></script>
+  <script>
+    // --- TIMER LOGIC (Optional countdown) ---
+const timer = document.querySelector(".timer");
+if (timer) {
+  let count = 125;
+  let interval = setInterval(() => {
+    timer.innerText = count;
+    count--;
+    if (count < 0) {
+      clearInterval(interval);
+      window.location.href = "index.html"; // Redirect after timer ends
+    }
+  }, 1000);
+}
+
+
+    const inc = document.getElementById('incBtn');
+const dec = document.getElementById('decBtn');
+const countEl = document.getElementById('ticketCount');
+const fareEl = document.getElementById('fare');
+
+let count = 1;
+const baseFare = 22.79;
+
+function update() {
+  countEl.textContent = count;
+  fareEl.textContent = '₹ ' + (baseFare * count);
+}
+
+inc.addEventListener('click', () => {
+  if (count < 4) {
+    count++;
+    update();
+  }
+});
+
+dec.addEventListener('click', () => {
+  if (count > 1) {
+    count--;
+    update();
+  }
+});
+const payLink = document.getElementById("payLink");
+payLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.setItem("finalFare", fareEl.textContent); // store fare
+  window.location.href = "index5.html";
+});
+
+
+  </script>
 </html>
