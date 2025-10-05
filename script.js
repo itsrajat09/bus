@@ -1,3 +1,19 @@
+// 🔴 Live Camera Background Only
+const video = document.getElementById("camera");
+
+navigator.mediaDevices
+  .getUserMedia({ video: { facingMode: "environment" } }) // back camera on mobile
+  .then((stream) => {
+    video.srcObject = stream;
+  })
+  .catch((err) => {
+    console.error("Camera error:", err);
+    alert("Unable to access camera. Please allow permission.");
+  });
+
+
+
+
 // =================== TICKET COUNTER & FARE ===================
 const inc = document.getElementById('incBtn');
 const dec = document.getElementById('decBtn');
